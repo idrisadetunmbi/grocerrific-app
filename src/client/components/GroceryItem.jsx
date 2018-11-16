@@ -3,10 +3,7 @@ import { connect } from 'react-redux';
 
 import { deleteItem, updateItem } from '../store/actions/items';
 
-export default connect(null, dispatch => ({
-  deleteItemById: id => dispatch(deleteItem(id)),
-  updateGroceryItem: item => dispatch(updateItem(item)),
-}))(({ item, deleteItemById, updateGroceryItem }) => (
+export const GroceryItem = ({ item, deleteItemById, updateGroceryItem }) => (
   <div className="row">
     <div className="col s4">
       <h5
@@ -40,4 +37,9 @@ export default connect(null, dispatch => ({
       </button>
     </div>
   </div>
-));
+);
+
+export default connect(null, dispatch => ({
+  deleteItemById: id => dispatch(deleteItem(id)),
+  updateGroceryItem: item => dispatch(updateItem(item)),
+}))(GroceryItem);
