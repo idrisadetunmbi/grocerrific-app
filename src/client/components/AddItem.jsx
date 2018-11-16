@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { addItem } from '../store/actions/items';
 
-class AddItem extends Component {
+export class AddItem extends Component {
   state = {
     item: {
       name: '',

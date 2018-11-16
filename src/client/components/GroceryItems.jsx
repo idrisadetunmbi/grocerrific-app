@@ -3,10 +3,12 @@ import { connect } from 'react-redux';
 
 import GroceryItem from './GroceryItem';
 
-export default connect(state => ({ items: state.items }))(({ items }) => (
+export const GroceryItems = ({ items }) => (
   <div>
     {
       items.map(item => <GroceryItem item={item} key={item._id} />)
     }
   </div>
-));
+);
+
+export default connect(state => ({ items: state.items }))(GroceryItems);

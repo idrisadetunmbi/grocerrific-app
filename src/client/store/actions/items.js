@@ -35,7 +35,6 @@ export const deleteItem = id => async (dispatch) => {
   try {
     await axios.delete(`/api/items/${id}`);
   } catch (error) {
-    console.log(error);
     return;
   }
   dispatch({
@@ -50,7 +49,6 @@ export const updateItem = item => async (dispatch) => {
     updatedItem = (await axios
       .put(`/api/items/${item._id}`, { purchased: !item.purchased })).data.data;
   } catch (error) {
-    console.log(error);
     return;
   }
   dispatch({
