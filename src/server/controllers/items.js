@@ -14,7 +14,7 @@ export default new class {
       await item.save();
       return res.status(200).json({ data: item });
     } catch (error) {
-      return res.status(400).send({ error: error.message });
+      return res.status(400).send({ error: error.errors.name.message });
     }
   }
 
