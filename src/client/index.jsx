@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const TestComponent = () => (<div>Grocerrific App</div>);
+import { App } from './components';
 
-ReactDOM.render(<TestComponent />, document.getElementById('app'));
+ReactDOM.render(<App />, document.getElementById('app'));

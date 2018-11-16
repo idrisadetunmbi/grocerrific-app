@@ -4,6 +4,10 @@
     "env": {
         "browser": true,
         "node": true
+    },
+    "rules": {
+        "react/no-did-update-set-state": ["disabled"],
+        "no-underscore-dangle": "off"
     }
 }
  
